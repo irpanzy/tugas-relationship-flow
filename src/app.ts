@@ -14,20 +14,20 @@ enum RelationshipStage {
 const transitions: { [key in RelationshipStage]: RelationshipStage[] } = {
   [RelationshipStage.SINGLE]: [RelationshipStage.KENALAN],
   [RelationshipStage.KENALAN]: [
+    RelationshipStage.TAARUF,
     RelationshipStage.PDK,
-    RelationshipStage.PACARAN,
   ],
   [RelationshipStage.PDK]: [RelationshipStage.KONFESS],
   [RelationshipStage.PACARAN]: [
-    RelationshipStage.SELINGKUH,
     RelationshipStage.LAMARAN,
+    RelationshipStage.SELINGKUH,
   ],
   [RelationshipStage.SELINGKUH]: [RelationshipStage.PUTUS],
-  [RelationshipStage.PUTUS]: [RelationshipStage.SINGLE],
   [RelationshipStage.LAMARAN]: [RelationshipStage.MENIKAH],
-  [RelationshipStage.MENIKAH]: [],
   [RelationshipStage.TAARUF]: [RelationshipStage.MENIKAH],
   [RelationshipStage.KONFESS]: [RelationshipStage.PACARAN],
+  [RelationshipStage.MENIKAH]: [],
+  [RelationshipStage.PUTUS]: [],
 };
 
 function getPossibleTransitions(stage: RelationshipStage): RelationshipStage[] {
