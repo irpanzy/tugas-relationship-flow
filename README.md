@@ -1,4 +1,4 @@
-﻿# Tugas Relationship Flow
+# Tugas Relationship Flow
 
 ## Deskripsi
 
@@ -35,7 +35,7 @@ Berikut adalah tahapan-tahapan hubungan dalam diagram:
 2.  Masuk ke direktori proyek.
 
     ```bash
-    cd relationship-flow
+    cd tugas-relationship-flow
     ```
 
 3.  Install semua dependensi yang diperlukan.
